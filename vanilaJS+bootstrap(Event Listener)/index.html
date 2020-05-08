@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <hr style="border: 1px solid rgb(211, 202, 202);">
+        <h1>Please enter a student with his name and last name in the following list:</h1>
+        <hr style="border: 1px solid rgb(211, 202, 202);">
+    </header>
+    <div class="container">
+        <form id="addForm">
+            <label for="exampleFormControlInput1">Enter a name of a student in order to add it to the list</label>
+            <input type="text" class="form-control mb-3" id="exampleFormControlInput1" placeholder="ex: John Doe">
+            
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Add an ID number of the student</label>
+                <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="1" min="1" max="9999" maxlength="4">
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-block mb-3" value="Submit">Submit</button>
+        </form>
+
+            <div  class="form-group">
+                <label for="exampleFormControlInput3">Search for a student</label>
+                <input type="text" id="filter" class="form-control mb-4" placeholder="Search..." aria-label="Recipient's name" aria-describedby="basic-addon2">              
+            </div>
+
+            <h2 class="title">Students List</h2>
+
+            <ul id="items" class="list-group mb-4">
+
+                <li class="list-group-item"><span class="btn btn-dark mr-1" >1</span>Lorem Ipsum
+                <button class="btn btn-danger btn-sm float-right delete">X</button>
+                </li>
+                <li class="list-group-item"><span class="btn btn-dark mr-1" >2</span >Leas Franz
+                    <button class="btn btn-danger btn-sm float-right delete">X</button>
+                </li>
+                    <li class="list-group-item"><span class="btn btn-dark mr-1">3</span >Federika Fransis
+                    <button class="btn btn-danger btn-sm float-right delete">X</button>    
+                </li>
+                <li class="list-group-item"><span class="btn btn-dark mr-1">4</span >Damas Filip
+                <button class="btn btn-danger btn-sm float-right delete">X</button>
+                </li>
+            </ul>
+          
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
