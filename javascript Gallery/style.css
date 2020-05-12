@@ -1,0 +1,32 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(182, 194, 155);
+}
+
+#art {
+ width: 400px;
+ margin: 0 auto;
+ color: rgb(61, 57, 39);
+ top: -200px;
+ 
+}
+
+#art h2 {
+    font-size: medium;
+    margin-bottom: 0;
+}
+
+ul{
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+}
+ul li img {
+    border: 2px solid rgb(187, 138, 138);
+}
