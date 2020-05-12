@@ -1,0 +1,43 @@
+3 ways of Registering an event:
+----------------------------------
+1) using tag attributes (directly in - placing the javascript into the html)
+2) using dot notation (onclick())
+3) using the most modern way (addEventListener())
+
+
+-----------------THE EVENTS PROPERTIES---------------------
+*Capturing an event returns an object
+It is important for us to know the:
+-type of event - we want to know the event we are getting example click event
+-timestamp - the time at which the event had happened
+-defaultPrevented - we are preventing an event from happening ex. we are clicking
+ a link but we dont want to be redirected to that page. So the value of this event will be true 
+ since it is preventing us from moving into another tab
+
+**1**
+screen X,Y - is giving us the possition relative to the user screen
+client X,Y - is giving us the possition relative to the window
+Offset X,Y - is giving us the x and y possitions relative to the element that fires the events
+Page X,Y - is giving us the events relative to the html document
+--Some browsers use Layes X,Y - it gives us the possition of the element relative to another 
+possitioned event that has to do with the css possitioning
+
+**2**
+CharCode/Key Code - ways of detecting which character was pressed
+Alt Key
+Shift Key
+button 
+Ctrl Key 
+
+**3**
+Targeting info
+toElement
+Target - The target is the element that the event originated from
+srcElement - is the actual element that fired an event
+FromElement - deal with mouse over and mouse out events
+ToElement - deal with mouse over and mouse out events
+
+---
+stopPropagation() - helps us to catch an event on a parent element 
+(capture and bubble, setting false and adding e.stopPropagation())
+preventDefault() - preventing from submitting a form or navigatinf to a web page etc.
