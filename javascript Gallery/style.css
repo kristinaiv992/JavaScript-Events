@@ -25,8 +25,25 @@ ul{
 ul li{
     list-style: none;
     display: inline-block;
-    cursor: pointer;
 }
-ul li img {
+ul li >img {
     border: 2px solid rgb(187, 138, 138);
+    /* cursor: pointer; */
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=12633), auto;
+} 
+
+
+ul li div.preview{
+
+    position: absolute;
+    top: -150px;
+    left: 110px;
+    z-index: 100;
+}
+
+ul li div.preview img{
+
+    max-width: 400px;
+    display: block;
+    border-radius: 5%;
 }

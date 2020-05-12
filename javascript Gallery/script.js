@@ -23,3 +23,40 @@ document.querySelector('.grid').addEventListener('click', function(e) {
         }
   }); 
 
+  document.querySelector('.grid').addEventListener('mouseover', function (e) {
+    if(e.target.tagName === 'IMG'){
+
+      var myElement = document.createElement('div');
+      myElement.className = 'preview';
+      e.target.parentNode.appendChild(myElement);
+
+      var myNewImage = document.createElement('img');
+      var imageLocation = e.target.src;
+      myNewImage.src = imageLocation;
+      myElement.style.left = `${e.offsetX + 45 + "px"}`
+      myElement.style.top = `${e.offsetY + 45 + "px"}`
+      myElement.appendChild(myNewImage)
+
+      e.target.addEventListener('mouseout', function handling(f) {
+        
+        var myNode = f.target.parentNode.querySelector('div.preview')
+        console.log(myNode)
+        myNode.parentNode.removeChild(myNode)
+        e.target.removeEventListener('mouseout', handling)
+      })
+
+      e.target.addEventListener('contextmenu', function(g) {
+          g.preventDefault();
+        })
+
+        e.target.addEventListener('mousemove', function(h) {
+          
+          myElement.style.left = `${h.offsetX + 45 + "px"}`
+          myElement.style.top = `${h.offsetY + 45 + "px"}`
+        }) 
+
+
+
+    }
+  })
+
